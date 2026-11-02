@@ -1,62 +1,28 @@
 <a href="https://github.com/kinsamson0101"><img src="assets/banner.svg" width="100%" alt="kinsamson: free tools for people who make money online. Tool MMO miễn phí, mã nguồn mở."></a>
 
-<p>
-<a href="https://t.me/iamsamson"><img alt="Telegram" src="https://img.shields.io/badge/Telegram-172A3A?style=for-the-badge&logo=telegram&logoColor=F4C95D"></a>
-<a href="https://www.facebook.com/profile.php?id=100010935341005"><img alt="Facebook" src="https://img.shields.io/badge/Facebook-172A3A?style=for-the-badge&logo=facebook&logoColor=F4C95D"></a>
-<a href="mailto:itktpm3@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-172A3A?style=for-the-badge&logo=gmail&logoColor=F4C95D"></a>
+<p align="center">
+<a href="https://t.me/iamsamson"><img src="assets/btn-telegram.svg" height="46" alt="Telegram @iamsamson"></a>
+<a href="https://www.facebook.com/profile.php?id=100010935341005"><img src="assets/btn-facebook.svg" height="46" alt="Facebook"></a>
+<a href="mailto:itktpm3@gmail.com"><img src="assets/btn-email.svg" height="46" alt="Email itktpm3@gmail.com"></a>
 </p>
 
-I build automation for people who earn online: bots, auto-job runners, scrapers, browser automation.
-The tools that hold up in daily use get cleaned up and released here, free.
+<p align="center">
+<img src="assets/trust-open-source.svg" width="260" alt="Open source. Soi được từng dòng code.">
+<img src="assets/trust-safe.svg" width="260" alt="No token grabbing. Không lấy cookie, token.">
+<img src="assets/trust-free.svg" width="260" alt="Free forever. Không key, không hạn dùng.">
+</p>
 
-<details>
-<summary><b>Đọc bằng tiếng Việt</b></summary>
-<br>
-
-Mình làm tool tự động hoá cho dân MMO: bot, tool chạy job, tool cào dữ liệu, tự động hoá trình duyệt.
-Tool nào chạy ổn ngoài thực tế sẽ được dọn code và public miễn phí ở đây.
-
-- Tool ở đây miễn phí, và sẽ luôn miễn phí. Không key, không giới hạn ngày dùng.
-- Mã nguồn mở toàn bộ. Tool không gửi cookie, token hay mật khẩu của bạn đi đâu ngoài chính nền tảng bạn đang chạy. Bạn tự soi code được.
-- Cần tool riêng theo cách bạn làm, thêm tính năng cho tool có sẵn, hoặc cần cài đặt giúp? Nhắn Telegram [@iamsamson](https://t.me/iamsamson).
-
-</details>
-
-### Free tools
+<p align="center">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kinsamson0101/kinsamson0101/main/assets/heading-tools-dark.svg">
+<img src="assets/heading-tools-light.svg" width="400" alt="Free tools. Tool miễn phí, tự cập nhật mỗi ngày.">
+</picture>
+</p>
 
 <!-- TOOLS:START -->
-<p><i>The first tool is on its way. Follow this profile to see it the day it ships.</i></p>
+<p align="center"><img src="assets/tools/_empty.svg" width="560" alt="First free tool drops soon. Tool miễn phí đầu tiên sắp lên kệ."></p>
 <!-- TOOLS:END -->
 
-### What you can count on
+<p align="center"><a href="https://t.me/iamsamson"><img src="assets/cta.svg" width="800" alt="Need a custom tool? Cần tool riêng? Nhắn Telegram @iamsamson."></a></p>
 
-- **Open source, start to finish.** Every release is built from the code in its repo. No obfuscated files, no download-only builds.
-- **Your accounts stay yours.** Tools never send cookies, tokens, or passwords anywhere except the platform you point them at.
-- **Free stays free.** No license keys, no trial timers, no "pro unlock" hidden inside a free tool.
-- **Automation has risks.** Platforms can limit or ban automated accounts. Read each repo's notes before you run it, and start on accounts you can afford to lose.
-
-### Need more than the free version?
-
-I also build private tools to order:
-
-- a tool shaped around your own workflow
-- extra features on top of a free tool from this page
-- remote setup, so the tool runs on your machine
-
-Message me on Telegram at [@iamsamson](https://t.me/iamsamson) with what you want automated.
-
-### Built with
-
-<p>
-<img alt="Node.js" src="https://img.shields.io/badge/Node.js-172A3A?style=flat-square&logo=nodedotjs&logoColor=F4C95D">
-<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-172A3A?style=flat-square&logo=typescript&logoColor=F4C95D">
-<img alt="Python" src="https://img.shields.io/badge/Python-172A3A?style=flat-square&logo=python&logoColor=F4C95D">
-<img alt="Puppeteer" src="https://img.shields.io/badge/Puppeteer-172A3A?style=flat-square&logo=puppeteer&logoColor=F4C95D">
-<img alt="Selenium" src="https://img.shields.io/badge/Selenium-172A3A?style=flat-square&logo=selenium&logoColor=F4C95D">
-<img alt="Telegram bots" src="https://img.shields.io/badge/Telegram_bots-172A3A?style=flat-square&logo=telegram&logoColor=F4C95D">
-<img alt="Chrome extensions" src="https://img.shields.io/badge/Chrome_extensions-172A3A?style=flat-square&logo=googlechrome&logoColor=F4C95D">
-<img alt="Next.js" src="https://img.shields.io/badge/Next.js-172A3A?style=flat-square&logo=nextdotjs&logoColor=F4C95D">
-<img alt="Docker" src="https://img.shields.io/badge/Docker-172A3A?style=flat-square&logo=docker&logoColor=F4C95D">
-</p>
-
-<sub>If a tool saves you time, star its repo. Stars are how other people find it.</sub>
+<p align="center"><img src="assets/stack.svg" width="800" alt="Built with Node.js, TypeScript, JavaScript, Python, Next.js, React, Git, Puppeteer, Selenium, Telegram bots, Chrome extensions, Docker, MongoDB, GitHub Actions."></p>
