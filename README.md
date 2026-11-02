@@ -1,9 +1,9 @@
 <a href="https://github.com/kinsamson0101"><img src="assets/banner.svg" width="100%" alt="kinsamson: free tools for people who make money online. Tool MMO miễn phí, mã nguồn mở."></a>
 
 <p>
-<a href="https://t.me/YOUR_TELEGRAM"><img alt="Telegram" src="https://img.shields.io/badge/Telegram-172A3A?style=for-the-badge&logo=telegram&logoColor=F4C95D"></a>
-<a href="https://www.facebook.com/groups/YOUR_FB_GROUP"><img alt="Facebook group" src="https://img.shields.io/badge/Facebook_group-172A3A?style=for-the-badge&logo=facebook&logoColor=F4C95D"></a>
-<a href="mailto:YOUR_EMAIL"><img alt="Email" src="https://img.shields.io/badge/Email-172A3A?style=for-the-badge&logo=gmail&logoColor=F4C95D"></a>
+<a href="https://t.me/iamsamson"><img alt="Telegram" src="https://img.shields.io/badge/Telegram-172A3A?style=for-the-badge&logo=telegram&logoColor=F4C95D"></a>
+<a href="https://www.facebook.com/profile.php?id=100010935341005"><img alt="Facebook" src="https://img.shields.io/badge/Facebook-172A3A?style=for-the-badge&logo=facebook&logoColor=F4C95D"></a>
+<a href="mailto:itktpm3@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-172A3A?style=for-the-badge&logo=gmail&logoColor=F4C95D"></a>
 </p>
 
 I build automation for people who earn online: bots, auto-job runners, scrapers, browser automation.
@@ -18,7 +18,7 @@ Tool nào chạy ổn ngoài thực tế sẽ được dọn code và public mi�
 
 - Tool ở đây miễn phí, và sẽ luôn miễn phí. Không key, không giới hạn ngày dùng.
 - Mã nguồn mở toàn bộ. Tool không gửi cookie, token hay mật khẩu của bạn đi đâu ngoài chính nền tảng bạn đang chạy. Bạn tự soi code được.
-- Cần tool riêng theo cách bạn làm, thêm tính năng cho tool có sẵn, hoặc cần cài đặt giúp? Nhắn [Telegram](https://t.me/YOUR_TELEGRAM).
+- Cần tool riêng theo cách bạn làm, thêm tính năng cho tool có sẵn, hoặc cần cài đặt giúp? Nhắn Telegram [@iamsamson](https://t.me/iamsamson).
 
 </details>
 
@@ -43,7 +43,7 @@ I also build private tools to order:
 - extra features on top of a free tool from this page
 - remote setup, so the tool runs on your machine
 
-Message me on [Telegram](https://t.me/YOUR_TELEGRAM) with what you want automated.
+Message me on Telegram at [@iamsamson](https://t.me/iamsamson) with what you want automated.
 
 ### Built with
 
