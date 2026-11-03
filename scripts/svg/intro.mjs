@@ -7,19 +7,28 @@ import { CARD_H, GUTTER, LEFT_W, ROW1_PAD } from '../lib/grid.mjs';
 
 const X = 34;
 
+// Written for Vietnamese MMO folks, in the words they use.
 const COPY = {
   wordmark: 'kinsamson',
-  tagline: 'Free tools for people who make money online.',
-  taglineNarrow: ['Free tools for people', 'who make money online.'],
+  tagline: 'Tool MMO miễn phí, mã nguồn mở.',
   prompt: '›',
-  words: ['auto-job runners', 'Telegram bots', 'data scrapers', 'browser automation', 'tool MMO miễn phí'],
+  words: ['tool auto job', 'bot Telegram', 'tool cào dữ liệu', 'auto trình duyệt', 'tool theo yêu cầu'],
 };
 
 // 24x24 line icons, stroked so they can draw themselves in.
+const ICONS = {
+  shield: ['M12 2.6l8 3v6.1c0 5-3.4 8.6-8 9.9-4.6-1.3-8-4.9-8-9.9V5.6z', 'M8.4 12.1l2.6 2.6 4.8-5'],
+  unlock: ['M6 11h12a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 18 21H6a1.5 1.5 0 0 1-1.5-1.5v-7A1.5 1.5 0 0 1 6 11z', 'M8 11V7.5a4 4 0 0 1 7.6-1.8', 'M12 15v2.4'],
+};
+
+// `narrow` is the label used when a phone shrinks the card: shorter, so it can be set larger.
 const PROMISES = [
-  { label: 'Open source', icon: ['M8 7l-5 5 5 5', 'M16 7l5 5-5 5', 'M13.6 4.5l-3.2 15'] },
-  { label: 'No token grabbing', icon: ['M12 2.6l8 3v6.1c0 5-3.4 8.6-8 9.9-4.6-1.3-8-4.9-8-9.9V5.6z', 'M8.4 12.1l2.6 2.6 4.8-5'] },
+  { icon: 'shield', wide: 'Không lấy cookie, token', narrow: 'Không lấy token' },
+  { icon: 'unlock', wide: 'Không cần key', narrow: 'Không cần key' },
 ];
+
+// Baselines of the three lines under the wordmark.
+const Y = { tagline: 129, typing: 171, promises: 227 };
 
 // Typing rhythm, seconds.
 const TYPE = 0.07;
@@ -78,31 +87,30 @@ ${caret}
 ${still}</g>`;
 }
 
-function promises(y, size) {
+// One row of promises; `variant` picks the wide or the narrow labels.
+function promises(y, size, variant) {
   const ICON = 22;
   let x = X;
-  const items = PROMISES.map(({ label, icon }, i) => {
-    const g = `<g class="draw d${i}" transform="translate(${x} ${y - ICON / 2 - size * 0.36}) scale(${ICON / 24})" fill="none" stroke="${C.tag}" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">${icon.map((d) => `<path pathLength="1" d="${d}"/>`).join('')}</g>
+  const items = PROMISES.map((p, i) => {
+    const label = p[variant];
+    const g = `<g class="draw d${i}" transform="translate(${x} ${y - ICON / 2 - size * 0.36}) scale(${ICON / 24})" fill="none" stroke="${C.tag}" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">${ICONS[p.icon].map((d) => `<path pathLength="1" d="${d}"/>`).join('')}</g>
 <path d="${line(F.semi, label, x + ICON + 9, y, size)}" fill="${C.soft}"/>`;
     x += ICON + 9 + measure(F.semi, label, size) + 30;
     return g;
   });
-  return `<g class="pr">${items.join('\n')}</g>`;
+  return `<g class="${variant === 'wide' ? 'pw' : 'pn'}">${items.join('\n')}</g>`;
 }
-
-// Baselines of the three lines under the wordmark.
-const Y = { tagline: 129, typing: 171, promises: 227 };
 
 // On a phone GitHub shrinks this card to ~55%. The SVG sees its own rendered width, so below
-// 420px it enlarges the small lines (to about 12-14px on screen) and spreads them a little.
-const NARROW = `.tl2{display:none}
+// 420px it sets the typing line and the promises larger (about 12-14px on screen).
+const NARROW = `.pn{display:none}
 @media (max-width:420px){
-.tl{display:none}.tl2{display:inline}
-.ty{transform:translateY(26px) scale(1.15)}
-.pr{transform:translateY(13px) scale(1.25)}
+.pw{display:none}.pn{display:inline}
+.ty{transform:translateY(3px) scale(1.15)}
+.pn{transform:scale(1.25)}
 }
 .ty{transform-origin:${X}px ${Y.typing}px}
-.pr{transform-origin:${X}px ${Y.promises}px}`;
+.pn{transform-origin:${X}px ${Y.promises}px}`;
 
 export function intro() {
   const W = LEFT_W + GUTTER;
@@ -118,16 +126,16 @@ ${reducedMotion('.typing{display:none}.still{display:inline}.draw path{animation
 
   const body = `<rect x=".75" y=".75" width="${LEFT_W - 1.5}" height="${CARD_H - 1.5}" rx="22" fill="${C.ground}" stroke="${C.line}" stroke-width="1.5"/>
 <path d="${line(F.xbold, COPY.wordmark, X - 3, 92, 84, { ls: -0.025 })}" fill="${C.text}"/>
-<path class="tl" d="${line(F.medium, COPY.tagline, X, Y.tagline, 20)}" fill="${C.soft}"/>
-<path class="tl2" d="${COPY.taglineNarrow.map((s, i) => line(F.medium, s, X, Y.tagline + i * 29, 24)).join('')}" fill="${C.soft}"/>
+<path d="${line(F.medium, COPY.tagline, X, Y.tagline, 24)}" fill="${C.soft}"/>
 ${typingLine(Y.typing, 22)}
-${promises(Y.promises, 18)}`;
+${promises(Y.promises, 18, 'wide')}
+${promises(Y.promises, 18, 'narrow')}`;
 
   return svgDoc({
     w: W,
     h: CARD_H + ROW1_PAD,
     title: 'kinsamson',
-    desc: `${COPY.tagline} Building: ${COPY.words.join(', ')}. ${PROMISES.map((p) => p.label).join('. ')}.`,
+    desc: `${COPY.tagline} Làm: ${COPY.words.join(', ')}. ${PROMISES.map((p) => p.wide).join('. ')}.`,
     style,
     body,
   });
